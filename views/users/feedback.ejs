@@ -1,0 +1,36 @@
+<% include('../layout/header.ejs') %>
+
+<h1> Review and Feedback Form </h1>
+
+<form action="" method="post" encrypt="multipart/form-data">
+
+    <input type="text" name="name" placeholder="Enter name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+    <input type="text" name="rating" placeholder="rate the product (0 to 5)" required>
+    <br><br>
+    <input type="text" name="feedback" placeholder="Feedback" required>
+    <br><br>
+    <input type="text" name="buyProductId" placeholder="Enter buyProductId" required>
+    <br><br>
+    <input type="submit" value="Submit">
+    <br><br>
+
+</form>
+
+
+
+<%
+
+    if(typeof message !== 'undefined'){
+
+        %>
+            <p style="color: green;"><%= message %></p>
+        <%
+
+    }
+
+%>
+
+<% include('../layout/footer.ejs') %>
